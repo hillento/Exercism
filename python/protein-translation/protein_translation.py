@@ -1,4 +1,4 @@
-# Currently a work in progress
+# Currently a work in progressgit
 Codons = {
     "AUG" :  "Methionine",
     "UUU" : "Phenylalanine",
