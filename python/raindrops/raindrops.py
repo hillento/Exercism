@@ -1,15 +1,20 @@
 from enum import Enum
 
 
+
 class Drops(Enum):
     Pling = 3
     Plang = 5
     Plong = 7
 
-
 def convert(number: int) -> str:
-    drops = [drop.name for drop in Drops if not number % drop.value]
-    return ''.join(drops) or str(number)
+    sounds = ''
+    for drop in Drops:
+        if not number % drop.value:
+            sounds += drop.name
+    return sounds or str(number)
+
+
 
 
 #def convert(number):
