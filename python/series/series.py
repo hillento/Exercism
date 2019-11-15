@@ -6,4 +6,4 @@ def slices(series, length):
             subStrArr.append(sub_str)
         return subStrArr
     else:
-        raise ValueError("Cannot make substrings larger than original string")
+        raise ValueError("Cannot make substrings larger than original string or have a length less than 1")
