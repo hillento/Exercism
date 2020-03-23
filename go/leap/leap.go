@@ -6,9 +6,12 @@
 package leap
 
 // IsLeapYear should have a comment documenting it.
-func IsLeapYear(year int) bool {
-	if year < 0 {
-
+func IsLeapYear(yr int) bool {
+	if yr%400 == 0 {
+		return true
+	}
+	if yr%100 != 0 && yr%4 == 0 {
+		return true
 	}
 	return false
 }
