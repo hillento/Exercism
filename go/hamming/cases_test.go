@@ -64,7 +64,7 @@ var testCases = []struct {
 		0,
 		true,
 	}, {
-		s1:          "aüa",
+		s1:          "aaa",
 		s2:          "aÃa",
 		want:        1,
 		expectError: false,
