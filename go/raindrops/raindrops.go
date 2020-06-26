@@ -2,8 +2,7 @@ package raindrops
 
 import "strconv"
 
-//Converts number to sound based on its factors
-//if not corresponding factors are found it returns the number as a string
+//Convert takes and integer and returns a string that is dependant on the number's factors.
 func Convert(drop int) string {
 	var snd string
 
