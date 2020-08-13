@@ -1,6 +1,8 @@
 package scrabble
 
-import "strings"
+import (
+	"strings"
+)
 
 //Score determines the point value a string would have in the game of scrabble
 func Score(word string) int {
