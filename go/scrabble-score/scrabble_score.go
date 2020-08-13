@@ -1,16 +1,15 @@
 package scrabble
 
 import (
-	"strings"
+	"unicode"
 )
 
 //Score determines the point value a string would have in the game of scrabble
 func Score(word string) int {
-	word = strings.ToLower(word)
-	var score int = 0
+	var score int
 
 	for _, i := range word {
-		switch i {
+		switch unicode.ToLower(i) {
 		case 'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't':
 			score++
 		case 'd', 'g':
