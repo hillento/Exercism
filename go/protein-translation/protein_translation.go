@@ -1,6 +1,6 @@
 package protein
 
-import(
+import (
 	"errors"
 )
 
@@ -43,9 +43,8 @@ var codToProt = map[string]string{
 	"UGA": "STOP",
 }
 
-
 //FromCodon translates a codon to a protien
-func FromCodon(codon string)(string, error){
+func FromCodon(codon string) (string, error) {
 	protein, ok := codToProt[codon]
 
 	if !ok {
@@ -58,15 +57,15 @@ func FromCodon(codon string)(string, error){
 }
 
 //FromRNA translates the long form rna string into a slice of proteins
-func FromRNA(rna string)([]string, error){
-	codons := len(rna)/3
+func FromRNA(rna string) ([]string, error) {
+	codons := len(rna) / 3
 	var proteins []string
-	for i:= 0; i < codons; i++{
+	for i := 0; i < codons; i++ {
 		protein, err := FromCodon(rna[i*3 : i*3+3])
-		if err == ErrStop{
+		if err == ErrStop {
 			break
 		}
-		if err == ErrInvalidBase{
+		if err == ErrInvalidBase {
 			return proteins, err
 		}
 		proteins = append(proteins, protein)
